@@ -3,10 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Global Grooves Explorer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="brand">Global Grooves</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>World Radio Directory</h1>
+        <p>Listen to live broadcasts from around the globe.</p>
+        <div id="loading">Searching for stations...</div>
+    </header>
+
+    <main class="container">
+        <div id="player-box" class="hidden">
+            <h3 id="current-title">Select a station</h3>
+            <audio id="audio-element" controls></audio>
+        </div>
+
+        <div id="radio-results"></div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
