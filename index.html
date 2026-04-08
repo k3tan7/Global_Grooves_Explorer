@@ -8,27 +8,43 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="brand">Global Grooves</div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="favorites.html">Favorites</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
+        <div class="container nav-content">
+            <div class="brand">Global Grooves</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="favorites.html">Favorites</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><button id="mode-toggle" class="btn-secondary">Dark Mode</button></li>
+            </ul>
+        </div>
     </nav>
 
     <header class="hero">
-        <h1>World Radio Directory</h1>
-        <p>Listen to live broadcasts from around the globe.</p>
-        <div id="loading">Searching for stations...</div>
+        <div class="container">
+            <h1>World Radio Directory</h1>
+            <p>Explore live broadcasts from across the globe</p>
+
+            <div class="filter-controls">
+                <input type="text" id="user-search" placeholder="Search by name...">
+                <select id="user-sort">
+                    <option value="default">Sort by</option>
+                    <option value="az">A to Z</option>
+                    <option value="za">Z to R</option>
+                </select>
+            </div>
+            <div id="loader">Retrieving stations...</div>
+        </div>
     </header>
 
     <main class="container">
-        <div id="player-box" class="hidden">
-            <h3 id="current-title">Select a station</h3>
-            <audio id="audio-element" controls></audio>
+        <div id="playback-bar" class="hidden">
+            <div class="player-info">
+                <span id="now-playing-name">No station selected</span>
+                <audio id="audio-engine" controls></audio>
+            </div>
         </div>
 
-        <div id="radio-results"></div>
+        <div id="station-list"></div>
     </main>
 
     <script src="script.js"></script>

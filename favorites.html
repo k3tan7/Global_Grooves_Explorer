@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites - Global Grooves Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="brand">Global Grooves</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="favorites.html" class="active">Favorites</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><button id="mode-toggle" class="btn-secondary">Dark Mode</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>My Favorites</h1>
+            <p>Your saved radio stations</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="playback-bar" class="hidden">
+            <div class="player-info">
+                <span id="now-playing-name">No station selected</span>
+                <audio id="audio-engine" controls></audio>
+            </div>
+        </div>
+
+        <div style="padding: 60px 0; text-align: center;" id="empty-state">
+            <p style="color: var(--text-muted); font-size: 1.1rem;">No favorites yet. Add stations from the <a href="index.html" style="color: var(--primary-color); text-decoration: none; border-bottom: 1px solid var(--primary-color);">home page</a>.</p>
+        </div>
+
+        <div id="station-list"></div>
+    </main>
+
+    <script src="favorites.js"></script>
+</body>
+</html>
