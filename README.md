@@ -41,3 +41,6 @@ To run this project locally for evaluation:
 1. Clone the repository to your local machine.
 2. Open the index.html file in any modern web browser.
 3. Ensure an active internet connection to allow the Fetch API to retrieve live data from the Radio Browser servers.
+
+## Deployed Application
+Live URL: https://globalgroovesexplorer.vercel.app/
